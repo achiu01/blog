@@ -1,7 +1,10 @@
 Blog::Application.routes.draw do
   get "welcome/index"
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+
   #posts GET    /posts(.:format)          posts#indexjk
 
   # The priority is based upon order of creation: first created -> highest priority.
